@@ -171,13 +171,13 @@ const Hero = () => (
 const About = () => {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
   return (
-    <section id="about" className="py-16 md:py-24 bg-brand-tamarind text-brand-bg relative overflow-hidden">
+    <section id="about" className="py-8 md:py-12 bg-brand-tamarind text-brand-bg relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
         <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] border border-brand-orange rounded-full" />
         <div className="absolute bottom-[-20%] left-[-10%] w-[800px] h-[800px] border border-brand-orange rounded-full" />
       </div>
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-24 items-center">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -208,14 +208,14 @@ const About = () => {
             <p className="text-white text-lg leading-relaxed font-medium font-sans">
               El Tamarindo is more than a restaurant—it's a celebration of the vibrant cultures of El Salvador and Latin America. We focus on bold spices, fresh ingredients, and the hospitality we're known for.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-6">
-              <div className="bento-card px-5 py-4 bg-white/10 border-white/20 backdrop-blur-md flex flex-col justify-center min-h-0">
-                <h4 className="heading text-2xl font-bold text-brand-orange uppercase">100%</h4>
-                <p className="text-[10px] uppercase tracking-[0.2em] font-black text-white font-sans">Handmade Masa</p>
+            <div className="grid grid-cols-2 gap-2 pt-4">
+              <div className="rounded-xl px-3 py-2 bg-white/10 border border-white/20 backdrop-blur-sm flex flex-col justify-center">
+                <h4 className="heading text-xl md:text-2xl font-bold text-brand-orange uppercase leading-none">100%</h4>
+                <p className="text-[9px] md:text-[10px] uppercase tracking-widest font-black text-white font-sans mt-0.5">Handmade Masa</p>
               </div>
-              <div className="bento-card px-5 py-4 bg-white/10 border-white/20 backdrop-blur-md flex flex-col justify-center min-h-0">
-                <h4 className="heading text-2xl font-bold text-brand-orange uppercase">Daily</h4>
-                <p className="text-[10px] uppercase tracking-[0.2em] font-black text-white font-sans">Fresh Ingredients</p>
+              <div className="rounded-xl px-3 py-2 bg-white/10 border border-white/20 backdrop-blur-sm flex flex-col justify-center">
+                <h4 className="heading text-xl md:text-2xl font-bold text-brand-orange uppercase leading-none">Daily</h4>
+                <p className="text-[9px] md:text-[10px] uppercase tracking-widest font-black text-white font-sans mt-0.5">Fresh Ingredients</p>
               </div>
             </div>
           </motion.div>
@@ -227,8 +227,8 @@ const About = () => {
 
 // --- Marquee ---
 const Marquee = () => (
-  <section className="py-24 bg-brand-bg overflow-hidden">
-    <div className="flex overflow-hidden whitespace-nowrap border-y border-brand-tamarind/10 py-8">
+  <section className="py-8 md:py-12 bg-brand-bg overflow-hidden">
+    <div className="flex overflow-hidden whitespace-nowrap border-y border-brand-tamarind/10 py-4">
       <motion.div
         animate={{ x: [0, -1000] }}
         transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
@@ -243,9 +243,9 @@ const Marquee = () => (
 
 // --- Footer ---
 const Footer = () => (
-  <footer id="location" className="bg-brand-tamarind text-brand-bg pt-24 pb-12">
-    <div className="max-w-7xl mx-auto px-6">
-      <div className="grid lg:grid-cols-2 gap-24 mb-24">
+  <footer id="location" className="bg-brand-tamarind text-brand-bg pt-12 md:pt-16 pb-8">
+    <div className="max-w-7xl mx-auto px-4 md:px-6">
+      <div className="grid lg:grid-cols-2 gap-8 md:gap-12 mb-12">
         <div>
           <h2 className="heading text-5xl md:text-7xl font-black mb-12 uppercase leading-none">Find Us <br />at the Heart <br />of the City</h2>
           <div className="grid sm:grid-cols-2 gap-12">
@@ -483,25 +483,25 @@ const HomePage = () => (
   <>
     <Hero />
     <About />
-    <section className="py-24 bg-brand-bg md:px-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[120px]">
-        <div className="md:col-span-8 md:row-span-2 bento-card p-10 bg-brand-orange text-white flex flex-col justify-center">
-          <h3 className="heading text-4xl font-bold mb-2 uppercase">Craving something local?</h3>
-          <p className="text-white/95 mb-6 text-sm max-w-sm font-medium font-sans">Skip the line. Order your pupusas online and pick them up in as little as 15 minutes.</p>
-          <Link to="/menu" className="bg-brand-tamarind text-white px-8 py-3 rounded-full font-extrabold w-fit text-sm hover:scale-105 transition-transform shadow-xl text-center font-sans">ORDER NOW</Link>
+    <section className="py-6 md:py-10 bg-brand-bg px-4 md:px-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-3 auto-rows-auto">
+        <div className="md:col-span-8 md:row-span-2 bento-card p-5 md:p-6 bg-brand-orange text-white flex flex-col justify-center">
+          <h3 className="heading text-2xl md:text-4xl font-bold mb-1 uppercase leading-none">Craving something local?</h3>
+          <p className="text-white/95 mb-3 text-sm max-w-sm font-medium font-sans">Skip the line. Order your pupusas online and pick them up in as little as 15 minutes.</p>
+          <Link to="/menu" className="bg-brand-tamarind text-white px-6 py-2.5 rounded-full font-extrabold w-fit text-sm hover:scale-105 transition-transform shadow-xl text-center font-sans">ORDER NOW</Link>
         </div>
 
-        <div className="md:col-span-4 md:row-span-2 bento-card p-10 bg-brand-tamarind text-white flex flex-col justify-between">
+        <div className="md:col-span-4 md:row-span-2 bento-card p-5 md:p-6 bg-brand-tamarind text-white flex flex-col justify-between">
           <div className="flex justify-between items-start">
-            <Clock size={32} className="text-brand-orange" />
+            <Clock size={24} className="text-brand-orange" />
             <div className="text-[10px] uppercase font-bold tracking-widest text-brand-orange font-sans">Status</div>
           </div>
           <div>
-            <div className="flex items-center gap-2 mb-2">
+            <div className="flex items-center gap-2 mb-1">
               <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
               <span className="text-xs font-bold uppercase tracking-widest leading-none text-green-400 font-sans">Accepting Orders</span>
             </div>
-            <p className="text-2xl heading uppercase">Ready to serve.</p>
+            <p className="text-lg md:text-2xl heading uppercase leading-none mt-1">Ready to serve.</p>
           </div>
         </div>
       </div>
